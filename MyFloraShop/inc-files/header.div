@@ -1,0 +1,21 @@
+<div id="header">
+
+<a href="." title="Начало">Начало</a>
+<a href="list_clothes.php" title="Дамски дрехи">Дамски дрехи</a>
+<a href="contacts.php" title="Дамски дрехи">Контакти</a>
+<?php
+if (isset($_SESSION["username"]))
+  if ($_SESSION["usertype"]==1)
+{?>
+<a href="enter_cloth.php" title="Добавяне на нова дреха">Добавяне</a>
+<a href="logout.php">Изход</a>
+<?php } ?>
+<?php
+if (isset($_SESSION["username"]))
+  if ($_SESSION["usertype"]==2)
+{?>
+<a href="list_orders.php" title="Поръчки">Поръчки</a>
+<a href="logout.php">Изход</a>
+<?php } ?>
+
+</div>

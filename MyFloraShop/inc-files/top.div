@@ -1,0 +1,11 @@
+<div id="top" align="right">
+<?php
+if (!isset($_SESSION["username"]))
+{?>
+<form action="login.php" method="post">
+Потребител: <input type="text" name="username" value="admin"> Парола: <input type="password" name="passwd" value="admin"> <input type="submit" value="Вход">&nbsp;&nbsp;
+</form>
+<?php }
+else echo $_SESSION["personname"] . " <a href='logout.php'>Изход</a>&nbsp;&nbsp;";
+?>
+</div>
